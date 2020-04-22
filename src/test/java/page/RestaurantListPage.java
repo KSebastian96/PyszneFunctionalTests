@@ -19,6 +19,18 @@ public class RestaurantListPage {
     private List<WebElement> deliveryPriceList;
     @FindBy(css = ".kitchens")
     private List<WebElement> restaurantsResultCategoryList;
+    @FindBy(xpath = "//a[@href='minimalna-kwota-zamowienia']")
+    private List<WebElement> minimumOrderPriceFilterList;
+    @FindBy(css = "min-order")
+    private List<WebElement> minimumOrderPriceResultList;
+
+    public List<WebElement> getMinimumOrderPriceResultList(){
+        return minimumOrderPriceResultList;
+    }
+
+    public List<WebElement> getMinimumOrderPriceFilterList() {
+        return minimumOrderPriceFilterList;
+    }
 
     public List<WebElement> getRestaurantsResultCategoryList() {
         return restaurantsResultCategoryList;
