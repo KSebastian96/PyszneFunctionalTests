@@ -15,17 +15,17 @@ public class RestaurantListPage {
     private List<WebElement> categoryList;
     @FindBy(xpath = "//a[@href='koszty-dostawy']")
     private List<WebElement> deliveryPriceFilters;
-    @FindBy(xpath = "//div[@class='delivery js-delivery-container'] //div[@class='delivery-cost js-delivery-cost']")
+    @FindBy(xpath = "//div[@class='js-restaurant restaurant restaurant__open'] //div[@class='delivery-cost js-delivery-cost']")
     private List<WebElement> deliveryPriceList;
     @FindBy(css = ".kitchens")
     private List<WebElement> restaurantsResultCategoryList;
     @FindBy(xpath = "//a[@href='minimalna-kwota-zamowienia']")
     private List<WebElement> minimumOrderPriceFilterList;
-    @FindBy(css = "min-order")
-    private List<WebElement> minimumOrderPriceResultList;
+    @FindBy(xpath = "//div[@class='js-restaurant restaurant restaurant__open'] //div[@class='min-order']")
+    private List<WebElement> minimumOrderCostsResultList;
 
-    public List<WebElement> getMinimumOrderPriceResultList(){
-        return minimumOrderPriceResultList;
+    public List<WebElement> getMinimumOrderCostsResultList() {
+        return minimumOrderCostsResultList;
     }
 
     public List<WebElement> getMinimumOrderPriceFilterList() {
